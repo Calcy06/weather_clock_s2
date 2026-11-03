@@ -1,0 +1,37 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "cfg.c"
+        "gfx.c"
+        "form.c"
+        "net_http.c"
+        "weather.c"
+        "bili.c"
+        "wifi.c"
+        "prov.c"
+        "mqtt_app.c"
+        "buzzer.c"
+        "ssd1306.c"
+        "ui.c"
+        "fonts/font.c"
+        "fonts/font_ascii_8x16.c"
+        "fonts/font_num_24x32.c"
+        "fonts/font_cn_16x16.c"
+    INCLUDE_DIRS
+        "."
+        "fonts"
+    REQUIRES
+        nvs_flash
+        esp_wifi
+        esp_event
+        esp_netif
+        esp_http_client
+        esp_http_server
+        esp_timer
+        json
+        mqtt
+        lwip
+        mbedtls
+        esp_driver_i2c
+        esp_driver_gpio
+)

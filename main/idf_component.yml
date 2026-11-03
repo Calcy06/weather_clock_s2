@@ -1,0 +1,4 @@
+dependencies:
+  idf: ">=6.0"
+  # ESP-IDF v6.0 起 esp-mqtt 已移出 IDF，必须由组件管理器拉取
+  espressif/mqtt: "*"

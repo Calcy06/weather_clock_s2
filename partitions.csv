@@ -1,0 +1,6 @@
+﻿# 分区表：N8R2 = 8MB Flash
+# app 给到 3MB，够放 140KB 中文字库 + 全部代码，剩余留给以后扩展
+# Name,     Type, SubType, Offset,   Size
+nvs,        data, nvs,     0x9000,   0x6000,
+phy_init,   data, phy,     0xf000,   0x1000,
+factory,    app,  factory, 0x10000,  0x300000,
