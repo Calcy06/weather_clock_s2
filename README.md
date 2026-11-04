@@ -114,10 +114,11 @@ idf.py set-target esp32s2
 idf.py build
 
 # 4) 烧录 + 看日志
-idf.py -p /dev/ttyACM0 flash monitor
+idf.py -p /dev/ttyUSB0 flash monitor
 ```
 
-- ESP32‑S2 用原生 USB 烧录时端口是 `/dev/ttyACM0`；走板载 UART 是 `/dev/ttyUSB0`。
+- 本项目按**板载 UART**（CP210x）走，端口是 `/dev/ttyUSB0`；若走 S2 原生 USB 直连则是 `/dev/ttyACM0`。
+  用 `ls /dev/ttyUSB* /dev/ttyACM*` 确认，`-p` 参数填实际出现的那个。
 - 虚拟机里需要把 USB 设备直通给 Linux（VMware：虚拟机 → 可移动设备 → 连接；VirtualBox：设备 → USB）。
 - 烧录不进时：按住 **BOOT** 键，点一下 **RST**，松开 BOOT，再执行烧录。
 
